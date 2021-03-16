@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    background: #091921;
+} 
+#base {
+    color: #fff;
+    font-size: 26.5px;
+    font-family: Verdana;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+#cotizacion{
+    color: #fff;
+    font-size: 20px;
+    font-family: Verdana;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+#nombre{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 285px;
+    
+}
+#value1,
+#value2,
+#value3,
+#value4,
+#value5,
+#value6,
+#value7,
+#value8,
+#value9,
+#value10,
+#value11,
+#value12
+{
+    margin-top: 7px;
+    margin-bottom: 15px;
+    width: 275px;
+
+}
+#base input{
+    font-size: 32px;
+    justify-items: center;
+    text-align: left;
+    height: 40px;
+    color: #fff;
+    border:solid 3px #fff;
+    
+}
+#opcion11,
+#opcion12,
+#opcion21,
+#opcion22,
+#opcion31,
+#opcion32,
+#opcion41,
+#opcion42,
+#opcion51,
+#opcion52,
+#opcion61,
+#opcion62,
+#opcion71,
+#opcion72,
+#opcion81,
+#opcion82,
+#opcion91,
+#opcion92,
+#opcion101,
+#opcion102,
+#opcion111,
+#opcion112,
+#opcion121,
+#opcion122{
+    border:solid 3px #fff;
+    font-size: 25px;
+    color:#fff;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+#cont1,
+#cont2,
+#cont3,
+#cont4,
+#cont5,
+#cont6,
+#cont7,
+#cont8,
+#cont9,
+#cont10,
+#cont11,
+#cont12{
+    margin: -5px;
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+#conver{
+    
+    font-size: 30px;
+    border: solid 4px #fff;
+    font-family: Impact;
+    color: #fff;
+    font-family: Verdana;
+    text-align: center;
+}
+p{
+    font-size: 15.5px;
+}
+@media (max-width:487px){
+    #base input{
+    font-size: 27px;
+    justify-items: center;
+    text-align: left;
+    height: 50px;
+    color: #fff;
+    border:solid 3px #fff;
+    
+    }
+    #conver{
+        font-size: 30px; 
+        border: solid 3px #fff;
+        color: #fff;
+        font-family: Verdana;
+        text-align: center;
+    }
+    p{
+        font-size: 12.3px;
+    }
+}
+@media (width:320px){
+    #base {
+        color: #fff;
+        font-size: 23px;
+        font-family: Verdana;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #base input{
+    font-size: 24px;
+    justify-items: center;
+    text-align: left;
+    height: 50px;
+    color: #fff;
+    border:solid 3px #fff;
+    
+    }
+    #conver{
+        font-size: 28px;
+        border: solid 3px #fff;
+        color: #fff;
+        font-family: Verdana;
+        text-align: center;
+    }
+    #opcion{
+        border:solid 3px #fff;
+        font-size: 24px;
+        color:#fff;
+    }
+    p{
+        font-size: 9px;
+    }
+    
+}
+@media (max-width:280px){
+    #base {
+        color: #fff;
+        font-size: 23px;
+        font-family: Verdana;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #base input{
+    font-size: 24px;
+    justify-items: center;
+    text-align: left;
+    height: 50px;
+    color: #fff;
+    border:solid 3px #fff;
+    
+    }
+    #conver{
+        font-size: 28px;
+        border: solid 3px #fff;
+        color: #fff;
+        font-family: Verdana;
+        text-align: center;
+    }
+    #opcion{
+        border:solid 3px #fff;
+        font-size: 24px;
+        color:#fff;
+    }
+    p{
+        font-size: 7.9px;
+    }
+    
+}
+
+
+
