@@ -79,6 +79,9 @@ v12= 0;
 function coti(){
     
     var persona= document.getElementById('nombre').value;
+    var ruc = document.getElementById('ruc').value;
+    var email= document.getElementById('email').value;
+    var celular=document.getElementById('celular').value;
     v1 =parseFloat(document.getElementById('value1').value);
     if(conta==1){
         v1 =parseFloat(document.getElementById('value1').value);
@@ -1585,207 +1588,206 @@ function coti(){
        v12.toFixed(2)]
     sumatoria= v1+v2+v3+v4+v5+v6+v7+v8+v9+v10+v11+v12;
     total= sumatoria + (sumatoria*0.18);
-    
-
-    
-    
-
+        
+    document.getElementById('RUC').innerHTML = ruc;
+    document.getElementById('CORREO').innerHTML = email;  
+    document.getElementById('CELU').innerHTML = celular; 
     
     document.getElementById('nombr').innerHTML = persona;
-    document.getElementById('result').innerHTML = "SUBTOTAL: "+" S./"+sumatoria.toFixed(2);
-    document.getElementById('igv').innerHTML = "IGV 18%: "+ " S./"+(0.18*(sumatoria.toFixed(2))).toFixed(2); 
-    document.getElementById('total').innerHTML = "TOTAL: "+ " S./"+ total.toFixed(2);  
+    document.getElementById('result').innerHTML = "SUBTOTAL: "+" S/"+sumatoria.toFixed(2);
+    document.getElementById('igv').innerHTML = "IGV 18%: "+ " S/"+(0.18*(sumatoria.toFixed(2))).toFixed(2); 
+    document.getElementById('total').innerHTML = "TOTAL: "+ " S/"+ total.toFixed(2);  
       
     for(var i=0; i<=conta; i++){
         if (conta==0){
             //document.getElementById('total').innerHTML = lista[0]+"Unidades "+ " de" +selectValue11+ "-" +selectValue12+ + " es "+ l[0] + "\n";
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
             ps = peso[0];
         }
         else if(conta==1){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
             ps = peso[0]+peso[1];
         }
         else if(conta==2){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2];
         }
         else if(conta==3){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3];
         }
         else if(conta==4){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4];
         }
         else if(conta==5){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5];
         }
         else if(conta==6){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6];
         }
         else if(conta==7){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7];
         }
         else if(conta==8){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8];
         }
         else if(conta==9){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9];
         }
         else if(conta==10){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10];
         }
         else if(conta==11){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
         else if(conta==12){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
         else if(conta==13){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
         
         else if(conta==14){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
         else if(conta==15){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
         else if(conta==16){
-            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(Und - S/."+ (l[0]/lista[0]).toFixed(2) +")= S/." + l[0]  +"\n";
-            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(Und - S/."+ (l[1]/lista[1]).toFixed(2) +")= S/." + l[1]  +"\n";
-            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(Und - S/."+ (l[2]/lista[2]).toFixed(2) +")= S/." + l[2]  +"\n";
-            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(Und - S/."+ (l[3]/lista[3]).toFixed(2) +")= S/." + l[3]  +"\n";
-            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(Und - S/."+ (l[4]/lista[4]).toFixed(2) +")= S/." + l[4]  +"\n";
-            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(Und - S/."+ (l[5]/lista[5]).toFixed(2) +")= S/." + l[5]  +"\n";
-            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(Und - S/."+ (l[6]/lista[6]).toFixed(2) +")= S/." + l[6]  +"\n";
-            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(Und - S/."+ (l[7]/lista[7]).toFixed(2) +")= S/." + l[7]  +"\n";
-            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(Und - S/."+ (l[8]/lista[8]).toFixed(2) +")= S/." + l[8]  +"\n";
-            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(Und - S/."+ (l[9]/lista[9]).toFixed(2) +")= S/." + l[9]  +"\n";
-            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(Und - S/."+ (l[10]/lista[10]).toFixed(2) +")= S/." + l[10]  +"\n";
-            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(Und - S/."+ (l[11]/lista[11]).toFixed(2) +")= S/." + l[11]  +"\n";
+            document.getElementById('r1').innerHTML = "·"+lista[0]+"MT²  (" +selectValue11 + " - "+selectValue12+") " + "(P.unit - S/"+ (l[0]/lista[0]).toFixed(2) +")= S/" + l[0]  +"<br/>";
+            document.getElementById('r2').innerHTML = "·"+lista[1]+"MT²  (" +selectValue21 + " - "+selectValue22+") " + "(P.unit - S/"+ (l[1]/lista[1]).toFixed(2) +")= S/" + l[1]  +"<br/>";
+            document.getElementById('r3').innerHTML = "·"+lista[2]+"MT²  (" +selectValue31 + " - "+selectValue32+") " + "(P.unit - S/"+ (l[2]/lista[2]).toFixed(2) +")= S/" + l[2]  +"<br/>";
+            document.getElementById('r4').innerHTML = "·"+lista[3]+"MT²  (" +selectValue41 + " - "+selectValue42+") " + "(P.unit - S/"+ (l[3]/lista[3]).toFixed(2) +")= S/" + l[3]  +"<br/>";
+            document.getElementById('r5').innerHTML = "·"+lista[4]+"MT²  (" +selectValue51 + " - "+selectValue52+") " + "(P.unit - S/"+ (l[4]/lista[4]).toFixed(2) +")= S/" + l[4]  +"<br/>";
+            document.getElementById('r6').innerHTML = "·"+lista[5]+"MT²  (" +selectValue61 + " - "+selectValue62+") " + "(P.unit - S/"+ (l[5]/lista[5]).toFixed(2) +")= S/" + l[5]  +"<br/>";
+            document.getElementById('r7').innerHTML = "·"+lista[6]+"MT²  (" +selectValue71 + " - "+selectValue72+") " + "(P.unit - S/"+ (l[6]/lista[6]).toFixed(2) +")= S/" + l[6]  +"<br/>";
+            document.getElementById('r8').innerHTML = "·"+lista[7]+"MT²  (" +selectValue81 + " - "+selectValue82+") " + "(P.unit - S/"+ (l[7]/lista[7]).toFixed(2) +")= S/" + l[7]  +"<br/>";
+            document.getElementById('r9').innerHTML = "·"+lista[8]+"MT²  (" +selectValue91 + " - "+selectValue92+") " + "(P.unit - S/"+ (l[8]/lista[8]).toFixed(2) +")= S/" + l[8]  +"<br/>";
+            document.getElementById('r10').innerHTML = "·"+lista[9]+"MT²  (" +selectValue101 + " - "+selectValue102+") " + "(P.unit - S/"+ (l[9]/lista[9]).toFixed(2) +")= S/" + l[9]  +"<br/>";
+            document.getElementById('r11').innerHTML = "·"+lista[10]+"MT²  (" +selectValue111 + " - "+selectValue112+") " + "(P.unit - S/"+ (l[10]/lista[10]).toFixed(2) +")= S/" + l[10]  +"<br/>";
+            document.getElementById('r12').innerHTML = "·"+lista[11]+"MT²  (" +selectValue121 + " - "+selectValue122+") " + "(P.unit - S/"+ (l[11]/lista[11]).toFixed(2) +")= S/" + l[11]  +"<br/>";
             ps = peso[0]+peso[1]+peso[2]+peso[3]+peso[4]+peso[5]+peso[6]+peso[7]+peso[8]+peso[9]+peso[10]+peso[11];
         }
     }
