@@ -238,6 +238,20 @@ function coti(){
         v11=parseFloat(document.getElementById('value11').value);
         v12=parseFloat(document.getElementById('value12').value);
     }
+    else if (conta==16){
+        v1 =parseFloat(document.getElementById('value1').value);
+        v2 =parseFloat(document.getElementById('value2').value);
+        v3 =parseFloat(document.getElementById('value3').value);
+        v4 =parseFloat(document.getElementById('value4').value);
+        v5 =parseFloat(document.getElementById('value5').value);
+        v6 =parseFloat(document.getElementById('value6').value);
+        v7 =parseFloat(document.getElementById('value7').value);
+        v8 =parseFloat(document.getElementById('value8').value);
+        v9 =parseFloat(document.getElementById('value9').value);
+        v10 =parseFloat(document.getElementById('value10').value);
+        v11=parseFloat(document.getElementById('value11').value);
+        v12=parseFloat(document.getElementById('value12').value);
+    }
     
     
     ///VARIABLES DE OPCIONES
