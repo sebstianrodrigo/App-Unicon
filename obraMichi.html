@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="utf-8">
+        <title>COTIZADOR</title>
+       
+        <link rel="stylesheet" type="text/css" href="css/obraMichi.css"/>
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+    </head>
+    <body>
+        <div id="base">
+            <form  name="" method="post">
+                <br/>
+                <div style="border: 2px solid #fff;">
+                    <label>INGRESE SU NOMBRE:</label>
+                    <br>
+                    <input type="text" name="nombre" id="nombre"  style="font-size: 24px;">
+                    <br>
+                    <label>INGRESE SU RUC:</label>
+                    <br>
+                    <input type="number" name="ruc" id="ruc"  style="font-size: 24px;margin-top: 5px;">
+                    <br>
+                    <label>INGRESE SU E-MAIL:</label>
+                    <br>
+                    <input type="email" name="email" id="email"  style="font-size: 24px;margin-top: 5px;">
+                    <br>
+                    <label>INGRESE SU CELULAR:</label>
+                    <br>
+                    <input type="number" name="celular" id="celular" style="font-size: 24px;margin-top: 5px;margin-bottom: 15px;">
+                    <br>
+
+                </div>
+                
+                 
+                <div id="cont1" style="border: 2px dashed #fff;">
+                    <label>KING BLOCK</label>
+                    <br>
+                    <select id ="opcion11" name="opcion11" data-validation="required" style="width: 250px;">
+                        <option id="GRASS-TIPO-MICHI" value="GRASS-TIPO-MICHI" style="font-size: 15px;"> GRASS TIPO MICHI</option>                        
+                    </select>
+                    <br/>                    
+                    <br>
+                    <label>CANTIDAD:</label>
+                    <br>
+                    <input type="number" name="" id="value1" autofocus placeholder=" INGRESE EN MT² " style="font-size: 24px;">
+                    <br>
+                </div>
+                
+                
+            </form>
+        </div>
+        
+        <br>
+        <div id="conver" >
+            <a href="#cotizacion" style="color: #fff;"><span id="num" onclick="coti();"> COTIZAR</span></a>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/> 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/> 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div id="cotizacion" style="text-align: justify;">
+            <br>
+            <p >Estimado señor/a: 
+                <span id="nombr"> </span>
+                <br>
+                <br/>
+                RUC: <span id=RUC> </span>
+                <br>
+                Correo: <span id=CORREO> </span>
+                <br/>
+                Celular: <span id=CELU> </span>
+                <br>
+                <br>
+                Se envia la siguiente cotización :
+                <br>
+                
+                <br/>
+                <span id="r1" style="float: left;"></span>                 
+                <br>
+                <br>
+                <br/>
+                <span id="result"style="float : right;text-align: justify;"></span>
+                <br/>
+                <span id="igv" style="float : right;text-align: justify;"></span>
+                <br/>
+                <span id="total" style="float : right;text-align: justify;"></span>
+                <br>
+                <br/>
+                <span id="peso" style="float : right;text-align: justify;"></span>
+                <br>
+                <br/>
+                <br/>
+                <label>Seleccione su distrito: </label>
+                <br/>
+                <select id ="distr" name="distr" data-validation="required" style="width: 180px;" >
+                    
+                    <option id="Ate" value="Ate" style="font-size: 15px;"> ATE</option>
+                    <option id="Barranco" value="Barranco" style="font-size: 15px;"> BARRANCO</option>
+                    <option id="Breña" value="Breña" style="font-size: 15px;"> BREÑA</option>
+                    <option id="Cercado" value="Cercado" style="font-size: 15px;"> CERCADO DE LIMA</option>
+                    <option id="Chorrillos" value="Chorrillos" style="font-size: 15px;"> CHORRILLOS</option>
+                    <option id="Comas" value="Comas" style="font-size: 15px;"> COMAS</option>
+                    <option id="Agustino" value="Agustino" style="font-size: 15px;"> EL AGUSTINO</option>
+                    <option id="Huachipa" value="Huachipa" style="font-size: 15px;">HUACHIPA</option>
+                    <option id="Independencia" value="Independencia" style="font-size: 15px;">INDEPENDENCIA</option>
+                    <option id="JesusMaria" value="JesusMaria" style="font-size: 15px;">JESUS MARIA</option>
+                    <option id="Molina" value="Molina" style="font-size: 15px;">LA MOLINA</option>
+                    <option id="Victoria" value="Victoria" style="font-size: 15px;">LA VICTORIA</option>
+                    <option id="Lince" value="Lince" style="font-size: 15px;">LINCE</option>
+                    <option id="Olivos" value="Olivos" style="font-size: 15px;">LOS OLIVOS</option>
+                    <option id="LuriganchoAv" value="LuriganchoAv" style="font-size: 15px;">LURIGANCHO (AV. CAJAMARQUILLA)</option>
+                    <option id="Magdalena" value="Magdalena" style="font-size: 15px;">MAGDALENA DEL MAR</option>
+                    <option id="Miraflores" value="Miraflores" style="font-size: 15px;">MIRAFLORES</option>
+                    <option id="PuebloLibre" value="PuebloLibre" style="font-size: 15px;">PUEBLO LIBRE</option>
+                    <option id="Rimac" value="Rimac" style="font-size: 15px;">RIMAC</option>
+                    <option id="SanBorja" value="SanBorja" style="font-size: 15px;">SAN BORJA</option>
+                    <option id="SanIsidro" value="SanIsidro" style="font-size: 15px;">SAN ISIDRO</option>
+                    <option id="SJL" value="SJL" style="font-size: 15px;">SAN JUAN DE LURIGANCHO</option>
+                    <option id="SJM" value="SJM" style="font-size: 15px;">SAN JUAN DE MIRAFLORES</option>
+                    <option id="SanLuis" value="SanLuis" style="font-size: 15px;">SAN LUIS</option>
+                    <option id="Martin" value="Martin" style="font-size: 15px;">SAN MARTIN DE PORRES</option>
+                    <option id="SanMiguel" value="SanMiguel" style="font-size: 15px;">SAN MIGUEL</option>
+                    <option id="SantaAnita" value="SantaAnita" style="font-size: 15px;">SANTA ANITA</option>
+                    <option id="Surco" value="Surco" style="font-size: 15px;">SANTIAGO DE SURCO</option>
+                    <option id="Surquillo" value="Surquillo" style="font-size: 15px;">SURQUILLO</option>
+                    <option id="VillaSalvador" value="VillaSalvador" style="font-size: 15px;">VILLA EL SALVADOR</option>
+                    <option id="VillaMaria" value="VillaMaria" style="font-size: 15px;">VILLA MARIA DEL TRIUNFO</option>
+
+                    <option id="Carabayllo" value="Carabayllo" style="font-size: 15px;">CARABAYLLO </option>
+                    <option id="Lurigancho" value="Lurigancho" style="font-size: 15px;">LURIGANCHO(CHOSICA) </option>
+                    <option id="Lurin" value="Lurin" style="font-size: 15px;">LURIN </option>
+                    <option id="Ñaña" value="Ñaña" style="font-size: 15px;">ÑAÑA </option>
+                    <option id="Pachacamac" value="Pachacamac" style="font-size: 15px;">PACHACAMAC </option>
+                    <option id="PuentePiedra" value="PuentePiedra" style="font-size: 15px;">PUENTE PIEDRA</option>
+                    <option id="Arica" value="Arica" style="font-size: 15px;">ARICA </option>
+                    <option id="Bellavista" value="Bellavista" style="font-size: 15px;">BELLAVISTA</option>
+                    <option id="Bocanegra" value="Bocanegra" style="font-size: 15px;">BOCANEGRA </option>
+                    <option id="Callao" value="Callao" style="font-size: 15px;">CALLAO </option>
+                    <option id="Chaclayo" value="Chaclayo" style="font-size: 15px;">CHACLACAYO </option>
+                    <option id="Chosica" value="Chosica" style="font-size: 15px;">CHOSICA </option>
+                    <option id="Cieneguilla" value="Cieneguilla" style="font-size: 15px;">CIENEGUILLA</option>
+                    <option id="Laperla" value="Laperla" style="font-size: 15px;">LA PERLA </option>
+                    <option id="Lapunta" value="Lapunta" style="font-size: 15px;">LA PUNTA </option>
+                    <option id="SantaRosaC" value="SantaRosaC" style="font-size: 15px;">SANTA ROSA (CALLAO)</option>
+                    <option id="Ventanilla" value="Ventanilla" style="font-size: 15px;">VENTANILLA</option>
+                    
+                    <option id="ElSilencio" value="ElSilencio" style="font-size: 15px;">EL SILENCIO</option>
+                    <option id="RicardoPalma" value="RicardoPalma" style="font-size: 15px;">RICARDO PALMA</option>
+                    <option id="Ancon" value="Ancon" style="font-size: 15px;">ANCON</option>
+                    <option id="PuntaHermosa" value="PuntaHermosa" style="font-size: 15px;">PUNTA HERMOSA</option>
+                    <option id="PuntaNegra" value="PuntaNegra" style="font-size: 15px;">PUNTA NEGRA</option>
+                    <option id="SantaRosaA" value="SantaRosaA" style="font-size: 15px;">SANTA ROSA(ANCON)</option>
+                    <option id="Pucusana" value="Pucusana" style="font-size: 15px;">PUCUSANA</option>
+                    <option id="SanBartolo" value="SanBartolo" style="font-size: 15px;">SAN BARTOLO</option>
+                    <option id="SantaMaria" value="SantaMaria" style="font-size: 15px;">SANTA MARIA</option>
+                    <option id="SanAntonio" value="SanAntonio" style="font-size: 15px;">SAN ANTONIO</option>
+                    <option id="Chilca" value="Chilca" style="font-size: 15px;">CHILCA</option>
+                    <option id="Mala" value="Mala" style="font-size: 15px;">MALA</option>
+                    <option id="Asia" value="Asia" style="font-size: 15px;">ASIA</option>
+                </select>
+                <br>
+                <label>Selecione su camion:</label>
+                <br>
+                <select id ="camion" name="camion" data-validation="required" style="width: 180px;">
+                    <option id="diez" value="diez" style="font-size: 15px;">10 TN</option>
+                    <option id="veinte" value="veinte" style="font-size: 15px;">20 TN</option>
+                    <option id="trentaidos" value="trentaidos" style="font-size: 15px;">32 TN</option>
+                </select>
+                <br/>
+                
+                <span style="border: 1px solid #fff;" id="num" onclick="confirmar();" >CONFIRMAR</span>
+                <br/>
+                <br/>
+                <br/>
+                <span id="flete" style="float : right;text-align: justify;"></span>
+                <br/>
+                <br/>
+                <span id="total2" style="float : right;text-align: justify;"></span>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                Cuentas (Union de Concreteras S.A)
+                <br>
+                <br>
+                BCP: 193-0099-308-009 
+                <br>
+                BBVA: 0011-0686-01-00012619 
+                <br>
+                <br/>
+                <br/>
+                <span style="font-size: 13px;">*PRECIOS RECOGE EN PLANTA*</span>
+                <br/>
+                <span style="font-size: 13px;">*ENVIAR PANTALLAZO PARA CONFIRMAR*</span>
+                
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <script type="text/javascript" src="js/obraMichi.js"></script>
+    </body>
+</html>
+ 

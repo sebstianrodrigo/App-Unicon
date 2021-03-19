@@ -75,8 +75,9 @@
 #opcion121,
 #opcion122{
     border:solid 3px #fff;
-    font-size: 25px;
+    font-size: 16px;
     color:#fff;
+    height: 40px;
     margin-top: 7px;
     margin-bottom: 15px;
 }

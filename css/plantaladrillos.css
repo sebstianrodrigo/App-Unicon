@@ -23,18 +23,7 @@
     width: 285px;
     
 }
-#value1,
-#value2,
-#value3,
-#value4,
-#value5,
-#value6,
-#value7,
-#value8,
-#value9,
-#value10,
-#value11,
-#value12
+#value1
 {
     margin-top: 7px;
     margin-bottom: 15px;
@@ -50,50 +39,18 @@
     border:solid 3px #fff;
     
 }
-#opcion11,
-#opcion12,
-#opcion21,
-#opcion22,
-#opcion31,
-#opcion32,
-#opcion41,
-#opcion42,
-#opcion51,
-#opcion52,
-#opcion61,
-#opcion62,
-#opcion71,
-#opcion72,
-#opcion81,
-#opcion82,
-#opcion91,
-#opcion92,
-#opcion101,
-#opcion102,
-#opcion111,
-#opcion112,
-#opcion121,
-#opcion122{
+#opcion11{
     border:solid 3px #fff;
-    font-size: 16px;
+    font-size: 20px;
     color:#fff;
-    height: 40px;
+    height: 45px;
     margin-top: 7px;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 
-#cont1,
-#cont2,
-#cont3,
-#cont4,
-#cont5,
-#cont6,
-#cont7,
-#cont8,
-#cont9,
-#cont10,
-#cont11,
-#cont12{
+
+
+#cont1{ 
     margin: -5px;
     margin-top: 20px;
     margin-bottom: -5px;
@@ -109,7 +66,7 @@
     text-align: center;
 }
 p{
-    font-size: 15.5px;
+    font-size: 16px;
 }
 @media (max-width:487px){
     #base input{
@@ -129,7 +86,7 @@ p{
         text-align: center;
     }
     p{
-        font-size: 12.3px;
+        font-size: 10.8px;
     }
 }
 @media (width:320px){
